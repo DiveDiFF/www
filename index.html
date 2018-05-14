@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta http-equiv="content-type" content="text/html;charset=UTF-8" 그냥 charset="UTF-8"로 써도 똑같음-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- width는 디바이스 사이즈에 맞춰 변경되도록 선언, scale은 0.5~10배까지 가능 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- X : 비표준, UA : 유저 에이전트를 호환성 모드로 동작, ie=8로 하면 버젼 10을 쓰고 있어도 8로 보이도록 하는 것이고,
+         edge를 입력하면 현재 브라우저의 최신버전으로 실행-->
+    <title>WEBCAFE - html5, css3, accessibility</title>
+    <link rel="shortcut icon" href="images/common/webcafe.ico" type="image/x-icon">
+    <!--favicon은 탭에 title 앞에 아이콘 등장, 북마크 추가시에도 등장 -->
+    <link rel="apple-touch-icon" href="images/common/webcafe.png">
+    <!-- 모바일 단축아이콘 만들면 등장하는 아이콘-->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!-- CSS 적용 -->  
+</head>
+<body>
+    <!-- 3단 또는 4단 구조로 만듬, 3단은 header, main, footer로 표현 (구버전은 div로 표현, 구분을 위해 div.header, div.main, div.footer로 씀)
+    네이밍은 id는 똑같은 값을 중복으로 쓸 수 없음, class는 가능 // 변하지 않는 부분 아웃라인 쪽은 id로 많이씀 -->
+    <!-- WAI-ARIA (reach internet application) 를 이용하면 구버전의 방식으로 단순히 네이밍을 넘어서 역할을 인식시키는게 가능함
+    div.header role="banner", div.main role="main", div.footer role="contentinfo"(랜드마크롤) 이렇게 role을 줌 , 시멘틱 마크업 중요 -->
+    <!-- 4단 구조는 header와 main 사이에 nav 영역을 하나 더 만듬 -->
+    <!-- section 안에서도 header, footer 사용 가능, 현업에선 아직도 div로 다 쓰는 개발자가 많음 -->
+    <!-- 두단어를 하나로 쓸때 MainContent(파스칼케이스), mainContent(파멜케이스), main-content(케밥케이스)-->
+    <!-- BEM, SMCSS, OOCSS 네이밍 정의 방법-->
+    <div class="wrapper">
+        <header class="header">HEADER</header>
+        <div class="visual">VISUAL</div>
+        <main class="main">
+            <div class="group group1">GROUP1</div>
+            <div class="group group2">GROUP2</div>
+            <div class="group group3">GROUP3</div>
+        </main>
+        <article class="slogan">
+            <h2 class="slogan-heading">
+                SLOGAN
+            </h2>
+        </article>
+        <!-- section, article, nav, aside 는 헤더가 필요-->
+        <div class="footer">
+            <footer class="footer">FOOTER</footer>
+        </div>
+    </div>
+</body>
+</html>
