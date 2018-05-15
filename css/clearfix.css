@@ -1,0 +1,12 @@
+.clearfix::after{
+  /* 가상요소 셀렉터 */
+  content: "";
+  background-color: black;
+  color : white;
+  display: block;
+  clear: both;
+}
+
+
+  /* position: relative; */
+  /* left:-20px; 플로트 레이아웃 테스트 코드 */
