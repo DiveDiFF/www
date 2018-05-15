@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF;
+  font-size : 16px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+
+}
+
+/* 레이아웃 */
+
+.wrapper{
+  background-color: yellow;
+  border-top: 1px solid transparent;
+  /* 현업에선 이런 문제 때문에 투명 보더를 1px로 추가시킴
+    border-top : 1px solid transparent */
+}
+
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header{
+  background-color: pink;
+  height: 10vh;
+  
+}
+.visual{
+  background-color: lime;
+  height: 10vh;
+}
+.main{
+  background-color: skyblue;
+  display: flex;
+  padding: 30px 0;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; 줄바꿈을 허용*/
+  /* flex-flow: row wrap; */
+      /* flex-direction + wrap을 함께 쓰는 단축표기 */ 
+  /* justify-content: flex-end; */
+    /* 메인축정렬 */
+  /* align-items: flex-end;  */
+    /* 교차축정렬 */
+  /* 이 flex방식은 ie 8버젼 작동안함
+    grid모듈이 더 최신기법이지만 이건 ie16(edge)버젼부터 가능 */
+
+}
+
+.group{
+  height: 20vh;
+}
+/* 노멀플로우 -> flaot 이용해서 띄우면 라인박스가 부모영역에 맞춰 맞춰짐 */
+.group1{
+  background-color: rgba(255, 255, 255, 0.5);
+  /* position: relative; */
+  /* left:-20px; 플로트 레이아웃 테스트 코드 */
+  width: 250px;
+  /* width: 450px; */
+}
+.group2{
+  background-color: hsla(120, 70%, 60%, 0.5);
+  width: 380px;
+}
+/* 이미 그룹1이 float 되어 있으면 라인박스는 그 공간만큼을 뺀 가용가능한 사이즈로 맞춰짐 */
+.group3{
+  background-color: tomato;
+  width: 190px;
+}
+.slogan{
+  background-color: blueviolet;
+  height: 10vh;
+
+}
+.footer-bg{
+  background-color: orange;
+}
+.footer{
+  background-color: silver;
+  height: 10vh;
+  
+}
