@@ -1,4 +1,70 @@
 body {
   background-color: #FFF;
   font-size : 16px;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: normal;
+
+}
+
+/* 레이아웃 */
+
+.wrapper{
+  background-color: yellow;
+  border-top: 1px solid transparent;
+  /* 현업에선 이런 문제 때문에 투명 보더를 1px로 추가시킴
+    border-top : 1px solid transparent */
+}
+
+.header, .visual, .main, .slogan, .footer{
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header{
+  background-color: pink;
+  height: 10vh;
+  
+}
+.visual{
+  background-color: lime;
+  height: 10vh;
+}
+.main{
+  background-color: skyblue;
+  height: 30vh;
+  overflow: hidden;
+}
+.group{
+  height: 30vh;
+  float: left;
+}
+/* 노멀플로우 -> flaot 이용해서 띄우면 라인박스가 부모영역에 맞춰 맞춰짐 */
+.group1{
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+.group2{
+  background-color: hsla(120, 70%, 60%, 0.5);
+}
+/* 이미 그룹1이 float 되어 있으면 라인박스는 그 공간만큼을 뺀 가용가능한 사이즈로 맞춰짐 */
+.group3{
+  background-color: tomato;
+}
+.slogan{
+  background-color: blueviolet;
+  height: 10vh;
+  clear: both;
+}
+.footer-bg{
+  background-color: orange;
+}
+.footer{
+  background-color: silver;
+  height: 10vh;
+  
 }
