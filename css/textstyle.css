@@ -1,0 +1,78 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fff;
+  font-size: 18pt;
+  margin: 0;
+}
+
+h2{
+  font-size: 1em;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* layout */
+
+.wrapper{
+  background-color: brown;
+}
+
+.header, .ad, .main, .slogan, .footer{
+  width: 940px;
+  margin : 0 auto;
+}
+
+.header{
+  background-color: rebeccapurple;
+  height: 10vh;
+}
+
+.ad{
+  background-color: orchid;
+  height: 10vh;
+}
+
+.main{
+  background-color: yellow;
+  display: flex;
+  padding: 30px 0;
+  justify-content: space-evenly;
+}
+
+.group{
+  height: 40vh;
+}
+
+.group1{
+  background-color: goldenrod;
+  width: 250px;
+}
+
+.group2{
+  background-color: green;
+  width: 380px;
+}
+
+.group3{
+  background-color: burlywood;
+  width: 180px;
+}
+
+.slogan{
+  background-color: aqua;
+  height: 10vh;
+}
+
+.footer-bg{
+  background-color: blue;
+}
+
+.footer{
+  background-color: rosybrown;
+  height : 10vh;
+
+
+}
