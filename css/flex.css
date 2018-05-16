@@ -1,19 +1,45 @@
+@import url("./normalize.css");
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #FFF;
-  font-size : 16px;
+h1, h2, h3, h4, h5, h6{
   margin: 0;
+  padding: 0:
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  color : inherit;
+  text-decoration: none;
+}
+
+/* 숨김 콘첸츠 */
+.readable-hidden{
+  background-color: aqua;
+  position: absolute;
+  left: -9999em;
+}
+
+body {
+  background-color: #fff;
+  font-size : 16px;
+  color: #181818;
 }
 
 h2 {
-  margin: 0;
   font-size: 1em;
   font-weight: normal;
 
 }
+
 
 /* 레이아웃 */
 
@@ -30,10 +56,43 @@ h2 {
 }
 
 .header{
-  background-color: pink;
-  height: 10vh;
+  background-color:#fff;
+  padding: 0 30px;
+  position: relative;
   
 }
+
+/* 로고 */
+.logo{
+  position: absolute;
+  top: 45px;
+  left: 65px; 
+}
+
+.member {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  position: relative;
+  right: -10px;
+
+}
+
+.member li{
+  float: left;
+  text-transform: uppercase;
+}
+
+.member a{
+  padding: 5px 10px;
+
+}
+
+.member li:nth-child(n+2)::before{
+  content: ":";
+  
+}
+
 .visual{
   background-color: lime;
   height: 10vh;
