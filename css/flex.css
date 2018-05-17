@@ -23,9 +23,11 @@ a{
 
 /* 숨김 콘첸츠 */
 .readable-hidden{
-  background-color: aqua;
+  background-color: red;
   position: absolute;
-  left: -9999em;
+  width: 1px;
+  height: 1px;
+  overflow : hidden;
 }
 
 body {
