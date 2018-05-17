@@ -1,4 +1,6 @@
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("./normalize.css");
+@import url("./fontello.css");
 
 
 *, *::before, *::after {
@@ -7,7 +9,7 @@
 
 h1, h2, h3, h4, h5, h6{
   margin: 0;
-  padding: 0:
+  padding: 0;
 }
 
 ul{
@@ -23,15 +25,23 @@ a{
 
 /* 숨김 콘첸츠 */
 .readable-hidden{
-  background-color: aqua;
   position: absolute;
-  left: -9999em;
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+  overflow: hidden;
+}
+
+html{
+  font-size: 10px;
 }
 
 body {
   background-color: #fff;
-  font-size : 16px;
+  font-size : 1.4em;
   color: #181818;
+  font-family: 'Spoqa Han Sans'
 }
 
 h2 {
@@ -47,6 +57,9 @@ h2 {
 
 .wrapper{
   background-color: silver;
+  background-image: url("images/bg_flower.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
   /* border-top: 1px solid transparent; */
   /* 현업에선 이런 문제 때문에 투명 보더를 1px로 추가시킴
     border-top : 1px solid transparent */
@@ -59,8 +72,9 @@ h2 {
 
 .header{
   background-color:#fff;
-  padding: 0 30px;
+  padding: 0 30px 40px;
   position: relative;
+  border-radius: 0 0 15px 15px;
   
 }
 
@@ -80,7 +94,7 @@ h2 {
 
 .member li{
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
@@ -92,10 +106,114 @@ h2 {
   content: ":";
 }
 
+/* 메인메뉴 */
+
+.menu{
+  
+  /* background: orange; */
+  background: linear-gradient(to bottom, #f26e21 0%,#ff4c00 35%,#ff4c00 65%,#f26e21 100%);
+  background-color: #ff4c00;
+  /* background-image: linear-gradient(-45deg, red 0%, green 30%, blue 100%); */
+  /* background-repeat: no-repeat; */
+  /* background-image: repeating-linear-gradient(225deg, red 0, red 50px, green 50px, green 100px); */
+  /* background-position: 50% 30%; */
+  /* background-size: 200px 200px; */
+  /* background: yellow url("images/ani_flower_03.png") no-repeat 50% 30% /200px 200px; */
+  border-top: 2px solid #000;
+  /* box-shadow: 0 -5px 0 0 green; */
+  border-radius: 0 0 5px 5px;
+  padding-left: 225px;
+  height: 47px;
+}
+
+.menu-item{
+  float: left;
+  position: relative;
+}
+
+.menu-item-text{
+  color: #fff;
+  line-height: 45px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 1.6rem; 
+  text-shadow: 1px 0 0 #000,0 1px  0 #000, -1px 0px 0px #000, 0px -1px 0px #000;
+}
+
+.menu-item-text:hover::after{
+  content: "";
+  background-color: #000;
+  display: block;
+  height: 2px;
+}
+
+.menu-item-text:hover{
+  color: #ff0;
+  cursor: pointer;
+}
+
+.sub-menu{
+  position: absolute;
+  top: 50px;
+  white-space: nowrap;
+}
+
+.sub-menu a::before { 
+  font-family: "fontello";
+  content: "\e804";
+  padding-right: 5px;
+}
+
+.sub-menu a:hover::before{
+  content: "\e800";
+}
+
+
+.sub-menu li{
+  display: inline-block;
+}
+
+.sub-menu a{
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 5px 10px 0;  
+}
+
+
+.menu-item:nth-child(1) .sub-menu{
+  display: none;
+  left: 0; 
+}
+.menu-item:nth-child(2) .sub-menu{
+  display: none;
+  left: 0;
+}
+.menu-item:nth-child(3) .sub-menu{
+  display: none;
+  left: 0;
+}
+.menu-item:nth-child(4) .sub-menu{
+  display: none;
+  right: 0;
+}
+.menu-item:nth-child(5) .sub-menu{
+  display: none;
+  right: 0;
+}
+.menu-item:nth-child(6) .sub-menu{
+  display: none;
+  right: 0;
+}
+
+/* 비주얼 */
 .visual{
   background-color: lime;
   height: 10vh;
 }
+
+/* 메인 콘텐츠 */
 .main{
   background-color: skyblue;
   /* float: left; 부모영역을 float처리해서 해결할 수도 있지만 이렇게 되면 마진값을 무시함*/
@@ -109,6 +227,7 @@ h2 {
   ie6 때는 zoom:1을 주면서 높이를 읽어드려 처리함
  */
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 /* .clearfix{ */
   /* clear: both; 는 블럭요소에서만 쓸수 있음, 인라인 요소는 무시됨*/
