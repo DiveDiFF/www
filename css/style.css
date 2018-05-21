@@ -26,7 +26,7 @@ a{
 }
 
 /* 숨김 콘첸츠 */
-.readable-hidden{
+.readable-hidden, legend{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -104,8 +104,8 @@ body {
 .menu{
   
   /* background: orange; */
-  background: linear-gradient(to bottom, #f26e21 0%,#ff4c00 35%,#ff4c00 65%,#f26e21 100%);
-  background-color: #ff4c00;
+  background: linear-gradient(to bottom, #ea8e3c 0%,#e86c00 25%,#e86c00 75%,#ea8e3c 100%);
+  background-color: #e86c00;
   /* background-image: linear-gradient(-45deg, red 0%, green 30%, blue 100%); */
   /* background-repeat: no-repeat; */
   /* background-image: repeating-linear-gradient(225deg, red 0, red 50px, green 50px, green 100px); */
@@ -253,7 +253,7 @@ body {
 
 /* 메인 콘텐츠 */
 .main{
-  background-color: skyblue;
+  background-color: #fff;
   /* float: left; 부모영역을 float처리해서 해결할 수도 있지만 이렇게 되면 마진값을 무시함*/
   /* height: 30vh; */
   /* overflow: hidden; */
@@ -280,7 +280,6 @@ body {
 }
 
 .group{
-  height: 30vh;
   float: left;
   margin: 0 15px;
 }
@@ -300,6 +299,99 @@ body {
   background-color: tomato;
   width: 190px;
 }
+
+/* 로그인 */
+
+.login{
+  background: radial-gradient(circle at right top,#ea8e3c 0%,#e86c00);
+  background-color: #e86c00;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #aaa
+}
+
+.login-heading{
+  color: #ff0;
+  font-size: 1.6rem;
+  margin: 0 0 15px 10px;
+}
+
+.login-form{
+  background-color: #fff;
+  padding: 10px 10px 0 10px;
+  margin: 10px 0 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.login-form fieldset{
+  margin: 0;
+  padding: 0 0 10px 0;
+  border: 0;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  /* line-height: 25px; */
+}
+
+.login-form [type="email"], .login-form [type="password"]{
+  width: 100px;
+  height: 22px;
+  border: 1px soild #aaa;
+  padding: 1px 1px 1px 5px;
+}
+
+.user-id {
+  margin-bottom: 6px;
+}
+
+.login-form [for="user-id"], .login-form [for="user-pw"]{
+  width: 4em;
+  display: inline-block;
+}
+
+.btn-login{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  border: 0;
+  top:0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #e86c00;
+  color: #fff;
+  border-radius: 3px;
+  font: inherit;
+  
+}
+
+.btn-login:hover{
+  color: #ff0;
+  cursor: pointer;
+}
+
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign a{
+  letter-spacing: -2px;
+  padding: 5px 0;
+}
+
+.sign .icon-right-open::before{
+  color: #e86c00;
+  font-size: 0.9em;
+}
+
+
+/* 슬로건 */
+
 .slogan{
   background-color: blueviolet;
   height: 10vh;
