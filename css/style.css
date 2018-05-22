@@ -49,6 +49,7 @@ body {
 /* 레이아웃 */
 
 .wrapper{
+  background: linear-gradient(to bottom, #aaa, #fff);
   background-color: silver;
   background-image: url("images/bg_flower.png");
   background-repeat: no-repeat;
@@ -266,6 +267,8 @@ body {
  */
   padding: 30px 15px;
   border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
 }
 /* .clearfix{ */
   /* clear: both; 는 블럭요소에서만 쓸수 있음, 인라인 요소는 무시됨*/
@@ -280,18 +283,15 @@ body {
 }
 
 .group{
-  float: left;
   margin: 0 15px;
 }
 /* 노멀플로우 -> flaot 이용해서 띄우면 라인박스가 부모영역에 맞춰 맞춰짐 */
 .group1{
-  background-color: rgba(255, 255, 255, 0.5);
   /* position: relative; */
   /* left:-20px; 플로트 레이아웃 테스트 코드 */
   width: 250px;
 }
 .group2{
-  background-color: hsla(120, 70%, 60%, 0.5);
   width: 380px;
 }
 /* 이미 그룹1이 float 되어 있으면 라인박스는 그 공간만큼을 뺀 가용가능한 사이즈로 맞춰짐 */
@@ -336,7 +336,7 @@ body {
 .login-form [type="email"], .login-form [type="password"]{
   width: 100px;
   height: 22px;
-  border: 1px soild #aaa;
+  border: 1px solid #aaa;
   padding: 1px 1px 1px 5px;
 }
 
@@ -366,7 +366,6 @@ body {
 }
 
 .btn-login:hover{
-  color: #ff0;
   cursor: pointer;
 }
 
@@ -389,6 +388,190 @@ body {
   font-size: 0.9em;
 }
 
+/* 유효성 검사 배너 리스트 */
+
+.validation-list{
+  margin-top : 20px;
+}
+
+.validation-list li{
+  margin-bottom: 10px;
+}
+
+.validation-list a{
+  border: 1px solid #aaa;
+  padding: 5px 5px 10px 45px;
+  border-radius: 20px;
+  display: block;
+  background: url("images/validation_icon.png") no-repeat 15px 50%, linear-gradient(to bottom, #ccc, #eee);
+  background-color: #ccc;
+}
+
+.validation-list a:hover{
+  color: #f00;
+  cursor: pointer;
+}
+
+/* 웹 관련용어 배너 */
+
+.term{
+  background: linear-gradient(to bottom, #eee, #ccc);
+  background-color: #ccc;
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.term-heading{
+  font-size: 1.5rem;
+}
+
+.term-list{
+  margin: 10px 0 0;
+}
+
+.term-list-subject{
+  float: right;
+  width: 145px;
+  color: #296897
+}
+
+.term-list-thumbnail{
+  margin: 0;
+  float: left;
+}
+
+.term-list-brief{
+  margin: 5px 0 0;
+  float: right;
+  width: 145px;
+  line-height: 1.5;
+}
+
+.term-list-thumbnail img{
+  display: block;
+}
+
+/* nth-child 활용한 다량 일괄 처리 법 */
+
+/* .term-list :nth-child(4), .term-list :nth-child(5){
+  margin-top: 10px;
+}
+
+.term-list :nth-child(4), .term-list :nth-child(6){
+  float: left;
+}
+
+.term-list :nth-child(5){
+  float: right;
+} */
+
+
+/* group2 */
+
+/* 자료검색 바 */
+
+.search-form{
+  background: linear-gradient(to top, #eee, #ccc);
+  background-color: #ccc;
+  padding: 15px 25px 10px;
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 0;
+}
+
+.search-form fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.search-form-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.search-form [id="search"]{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 5px;
+  width: 200px;
+  height: 24px;
+} 
+
+.btn-search{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #181818, #aaa);
+  background-color: #333;
+  color: #fff;
+  font: inherit;
+  font-size: 1.2rem;
+  height: 24px;
+}
+
+/* 게시판 */
+
+.board{
+  background: yellow;
+  position: relative;
+  margin-top: 23px;
+  height: 300px;
+}
+
+.board section{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.notice-list, .pds-list{
+  margin-top: 30px;
+  width: 380px;
+  order: 3;
+  line-height: 27px;
+}
+
+
+.notice{
+  background: pink;
+  /* display: none!important; */
+}
+
+.pds{
+  background-color: green;
+  z-index: 0;
+  display: none!important;
+}
+
+.tab{
+  margin: 0px;
+  padding: 10px;
+}
+
+.notice-heading{
+  background-color: red;
+  display: inline-block;
+}
+
+.notice-list{
+  background-color: blue;
+}
+
+.notice-more{
+  background: orange;
+}
+
+.pds-heading{
+  background: burlywood;
+  display: inline-block;
+  margin-left: 130px;
+}
 
 /* 슬로건 */
 
