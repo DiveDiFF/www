@@ -14,9 +14,12 @@
     <link rel="apple-touch-icon" href="images/common/webcafe.png">
     <!-- 모바일 단축아이콘 만들면 등장하는 아이콘-->
     <link rel="stylesheet" href="css/style.css"> 
+    <!-- <link rel="stylesheet" href="css/grid.css">  -->
     <!-- <link rel="stylesheet" href="css/flex.css">  -->
     <!-- <link rel="stylesheet" href="css/float.css"> -->
     <!-- CSS 적용 -->  
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/menu-tab.js" defer></script>
 </head>
 <body>
     <!-- 3단 또는 4단 구조로 만듬, 3단은 header, main, footer로 표현 (구버전은 div로 표현, 구분을 위해 div.header, div.main, div.footer로 씀)
@@ -210,24 +213,24 @@
                     <section class="notice is-act">
                         <h2 class="notice-heading tab" tabindex="0">공지사항</h2>
                         <ul class="notice-list">
-                            <li>
-                              <a href="#" class=icon-dot></a>HTML의 모든 것을 알려주마 샘플 활용법</a>
+                            <li class=icon-dot>
+                              <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>W3C 사이트 리뉴얼 및 공지사항</a>
+                            <li class=icon-dot>
+                              <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>KWCAG 2.1 소식</a>
+                            <li class=icon-dot>
+                              <a href="#">KWCAG 2.1 소식</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                            <li class=icon-dot>
+                              <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                            <li class=icon-dot>
+                              <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
                           </ul>
@@ -236,40 +239,138 @@
                     <section class="pds">
                           <h2 class="pds-heading tab" tabindex="0">자료실</h2>
                           <ul class="pds-list">
-                            <li>
-                              <a href="#" class=icon-dot>디자인 사이트 링크 모음</a>
+                            <li class=icon-dot>
+                              <a href="#">디자인 사이트 링크 모음</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>웹 접근성 관련 자료 모음</a>
+                            <li class=icon-dot>
+                              <a href="#">웹 접근성 관련 자료 모음</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>예제 샘플 응용해보기</a>
+                            <li class=icon-dot>
+                              <a href="#">예제 샘플 응용해보기</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+                            <li class=icon-dot>
+                              <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
-                            <li>
-                              <a href="#" class=icon-dot>로얄티 프리 이미지 자료</a>
+                            <li class=icon-dot>
+                              <a href="#">로얄티 프리 이미지 자료</a>
                               <time datetime="2018-05-23T15:55:30">2018.05.23</time>
                             </li>
                           </ul>
                           <a href="#" class="pds-more icon-plus" title="자료실" target="_blank">더보기</a>
                     </section>
                 </div>
+                <section class="news">
+                    <h2 class="news-heading">새소식</h2>
+                    <a href="#" class="news-link">
+                        <article class="news-item">
+                            <h3 class="news-item-heading icon-dot">W3C 사이트가 리뉴얼되었습니다.</h3>
+                            <time class="news-item-date" datetime="2017-09-19">2017.09.19</time>
+                            <p class="news-item-brief">
+                              디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 기존보다 최신 정보 및 개발자를 위한 기술 가이드도 찾기 쉽도록 구성되어 있습니다.
+                            </p>
+                            <figure class="news-item-thumbnail">
+                              <img src="images/news.gif" alt="HTML5를 발표하면서 새롭게 리뉴얼 된 W3C 공식 웹사이트">
+                              <figcaption>W3C 리뉴얼</figcaption>
+                            </figure>
+                        </article>
+                    </a>
+                    <a href="#" class="news-more icon-plus" title="새소식" target="_blank">더보기</a>
+                </section>
             </div>
-            <div class="group group3">GROUP3</div>
+            <div class="group group3">
+                <div class="event-related">
+                    <section class="event">
+                        <h2 class="event-heading">신규<span> 이벤트</span></h2>
+                        <div id="event-detail">
+                            <p class="event-thumbnail">
+                                <img src="images/free_gift.gif" alt="이벤트 경품 : 웹표준 핵심가이드북2 도서 증정">
+                            </p>
+                            <p class="event-brief">
+                                    <em>웹표준 핵심 가이드북 2 출시!</em> 선착순 500명 한정으로 증정.
+                            </p>
+                        </div>
+                        <div class="btn-event">
+                            <button type="button" class="btn-event-prev">이전 이벤트 보기</button>
+                            <button type="button" class="btn-event-next">다음 이벤트 보기</button>
+                        </div>
+                    </section>
+                    <section class="related">
+                        <h2 class="related-heading">관련<span>사이트</span></h2>
+                        <ul class="related-list">
+                            <li>
+                                <a href="#">패스트 캠퍼스</a>
+                            </li>
+                            <li>
+                                <a href="#">W3C</a>
+                            </li>
+                            <li>
+                                <a href="#">웹접근성 연구소</a>
+                            </li>
+                            <li>
+                                <a href="#">CSS ZenGarden</a>
+                            </li>
+                            <li>
+                                <a href="#">MDN</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="favorite">
+                    <h2 class="favorite-heading">인기 <span>사이트</span></h2>
+                    <ol class="favorite-list">
+                        <li><a href="#">W3C</a> <em class="up">상승</em></li>
+                        <li><a href="#">CSS ZenGarden</a> <em class="down">하락</em></li>
+                        <li><a href="#">Web Standards</a> <em class="stop">멈춤</em></li>
+                        <li><a href="#">MDN</a> <em class="up">상승</em></li>
+                    </ol>
+                    <a href="#" class="favorite-more icon-plus" title="인기 사이트" target=_blank>더보기</a>
+                </section>
+            </div>
             <!-- <div class="clearfix"></div> 이방법으로 float로 인한 세로값 측정 못하는 문제 해결하기도 함-->
         </main>
         <article class="slogan">
-            <h2 class="SLOGAN">SLOGAN</h2>
-        </article>
+                <h2 class="slogan-heading" title="웹카페에서 웹표준을">슬로건</h2>
+                <p class="slogan-content">
+                  <q cite="http://w3.org/WAI/">
+                    The power of the Web is in its universality, 
+                    Access by everyone regardless of 
+                    disability is an essential aspect.
+                  </q> Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+                </p>
+                <footer class="readable-hidden">
+                  출처 : WAI - http://w3.org/WAI
+                </footer>
+              </article>
         <!-- section, article, nav, aside 는 헤더가 필요-->
         <div class="footer-bg">
-            <footer class="footer">FOOTER</footer>
+            <footer class="footer">
+                <a href="#" class="footer-logo">
+                    <img src="images/footer_logo.png" alt="web cafe">
+                </a>
+                <ul class="guide">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보 보호정책</a></li>
+                    <li><a href="#">이메일주소 무단수집 거부</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">site map</a></li>
+                </ul>
+                <address class="address">
+                    <span>서울시 마포구 상수동 123-12 한주빌딩 5층</span>
+                    <span>전화: <a href="tel:022345678">02-234-5678</a></span>
+                    <span>E-MAIL: <a href="mailto:webmaster@webcafe2010.com">webmaster@webcafe2010.com</a></span>
+                </address>
+                <small class="copyright">
+                    Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+                </small>
+                <div class="badge">
+                    <img src="images/html5_logo.png" alt="최신 웹표준 기술인 HTML5를 적용하였습니다.">
+                    <img src="images/css3_logo.png" alt="최신 웹표준 기술인 CSS3를 활용하였습니다.">
+                </div>
+            </footer>   
         </div>
         <!-- div.footer-bg>footer.footer -->
     </div>
